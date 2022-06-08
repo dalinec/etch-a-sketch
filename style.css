@@ -1,0 +1,170 @@
+html {
+    font-family: 'Oswald', sans-serif;
+    position: relative;
+    min-height: 100%;
+}
+/*
+*,
+*::before
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0; 
+}*/
+
+body {
+    background-color:#f0eeeb;  
+    color: #323232;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+}
+
+h1 {
+    line-height: 1.3;
+    letter-spacing: 2px;
+}
+
+button, input {
+    width: 100%;
+    border: none;
+    color: #323232;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    outline: none;
+}
+
+/* HEADER */
+
+.header {
+    margin-bottom: -2rem;
+}
+
+.title {
+    text-align: center;
+    font-size: 85px;
+    margin-top: -5px;
+}
+ 
+/* MAIN CONTAINER */
+
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12rem;
+    max-width: 1100px;
+    padding-bottom: 2rem;
+}
+
+#left, #middle, #right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 200px;
+}
+
+#left {
+    padding-bottom: 6rem;
+}
+
+#right {
+    padding-bottom: 8rem;
+}
+
+/*#left:hover {
+    transform: scale(1.07);
+}*/
+
+button {
+    padding: 10px 20px;
+    border: 1px solid #323232;
+    border-radius: 6px;
+    font-size: 1.5rem;
+}
+
+button.active {
+    background-color: #323232;
+    color: #f0eeeb;
+}
+
+button,
+.picker {
+  transition: transform 0.1s ease-in-out;
+}
+
+button:hover,
+#colorPicker:hover {
+    transform: scale(1.03);
+}
+
+
+
+.size-value {
+    margin-bottom: -30px;
+    font-size: 1.5rem;
+}
+
+#colorPicker {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  width: 100px;
+  height: 100px;
+  border: none;
+}
+
+#colorPicker::-webkit-color-swatch {
+  border-radius: 50%;
+  border: none;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;  
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background:#323232;
+    cursor: pointer;
+  }
+
+.grid {
+    display: grid;
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  
+  .grid-element {
+    user-select: none;
+  }
+
+/* FOOTER */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    width: 100vh;
+    text-align: center;
+}
